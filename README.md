@@ -9,11 +9,9 @@ independent projects live in this repo:
 
 ## How it works
 
-The ESP32 runs a tiny "dumb display" firmware that  
-listens on the USB serial port and lights pixels. All of the
-artwork is computed on the Mac in Python and streamed over the cable, frame by
-frame. That means you can change the look instantly by editing Python, with no
-re-flashing of the board.
+The ESP32 runs a tiny "dumb display" firmware that listens on the 
+USB serial port and lights pixels. All of the artwork is computed on 
+the Mac in Python and streamed over the cable, frame by frame. 
 
 The panel is wired in a serpentine layout (each row runs the opposite
 direction from the last), 256 WS2812B pixels total, data on GPIO 13, GRB color
