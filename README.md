@@ -1,11 +1,15 @@
 # led-pixel-frame
 
-Pixel-art displays for a 16x16 WS2812B LED panel driven by an ESP32. Two
-independent projects live in this repo:
+A 16x16 grid of colorful LED lights, like a small pixel screen you can hang on
+the wall. It runs two different displays:
 
-- **subway-tracker**: a live NYC F-train countdown for the Delancey St-Essex St
-  station, uptown and downtown at a glance.
-- **audio-visualizer**: a real-time equalizer that dances to your microphone.
+- **Subway tracker**: shows how many minutes until the next F train at the
+  Delancey St-Essex St station, both uptown and downtown at the same time.
+- **Sound visualizer**: turns music, or any sound in the room, into bouncing
+  bars of light, like the equalizer on an old stereo.
+
+Everything runs on a small, inexpensive ESP32 board connected to your computer
+with a USB cable.
 
 ## How it works
 
@@ -13,15 +17,17 @@ The ESP32 runs a tiny "dumb display" firmware that listens on the
 USB serial port and lights pixels. All of the artwork is computed on 
 the Mac in Python and streamed over the cable, frame by frame. 
 
-The panel is wired in a serpentine layout (each row runs the opposite
-direction from the last), 256 WS2812B pixels total, data on GPIO 13, GRB color
-order. Brightness is kept low on purpose because the panel is powered over USB.
+Brightness is kept low on purpose, since the panel is powered through the USB
+cable rather than a separate power supply.
 
-## Hardware
+## What you need
 
-- ESP32 dev board running MicroPython
-- WS2812B 16x16 LED panel (256 pixels), data line on GPIO 13
-- A USB cable from the Mac to the ESP32
+- A 16x16 LED panel: 256 individually controllable lights, the common
+  "WS2812B" type (also sold as NeoPixel)
+- An ESP32 dev board, with MicroPython installed on it
+- A USB cable between the board and your computer
+
+The panel's data wire connects to pin GPIO 13 on the board.
 
 ## Setup
 
