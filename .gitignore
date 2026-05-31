@@ -1,0 +1,16 @@
+# virtualenv and Python artifacts
+.venv/
+__pycache__/
+*.pyc
+
+# MicroPython runtime binary (downloaded, not source)
+*.bin
+
+# local experiments and the love note, kept off GitHub
+find_corner.py
+heart.py
+panel_on.py
+rainbow_flow.py
+scroll_text.py
+test_pixels.py
+love_note.py
