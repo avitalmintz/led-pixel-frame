@@ -8,7 +8,7 @@ the wall. It runs two different displays:
 - **Sound visualizer**: turns music, or any sound in the room, into bouncing
   bars of light, like the equalizer on an old stereo.
 
-Everything runs on a small, inexpensive ESP32 board connected to your computer
+Everything runs on a small ESP32 board connected to your computer
 with a USB cable.
 
 ## How it works
@@ -16,9 +16,6 @@ with a USB cable.
 The ESP32 runs a tiny "dumb display" firmware that listens on the 
 USB serial port and lights pixels. All of the artwork is computed on 
 the Mac in Python and streamed over the cable, frame by frame. 
-
-Brightness is kept low on purpose, since the panel is powered through the USB
-cable rather than a separate power supply.
 
 ## What you need
 
